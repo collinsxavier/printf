@@ -25,12 +25,7 @@ int _printf(const char *format, ...)
 		{
 			buffer[buff_ind++] = format[i];
 			if (buff_ind == BUFF_SIZE)
-<<<<<<< HEAD
-			print_buffer(buffer, &buff_ind);
-
-=======
 				print_buffer(buffer, &buff_ind);
->>>>>>> 036c65f0bc910edc6d9dbbf5405c4a4731c3ca44
 			/* write(1, &format[i], 1);*/
 			printed_chars++;
 		}
@@ -45,23 +40,15 @@ int _printf(const char *format, ...)
 			printed = handle_print(format, &i, list, buffer,
 				flags, width, precision, size);
 			if (printed == -1)
-<<<<<<< HEAD
-			return (-1);
-=======
 				return (-1);
->>>>>>> 036c65f0bc910edc6d9dbbf5405c4a4731c3ca44
 			printed_chars += printed;
 		}
 	}
 
 	print_buffer(buffer, &buff_ind);
-<<<<<<< HEAD
-	va_end(list);
-=======
 
 	va_end(list);
 
->>>>>>> 036c65f0bc910edc6d9dbbf5405c4a4731c3ca44
 	return (printed_chars);
 }
 
@@ -73,12 +60,8 @@ int _printf(const char *format, ...)
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
-<<<<<<< HEAD
-	write(1, &buffer[0], *buff_ind);
-=======
 		write(1, &buffer[0], *buff_ind);
 
->>>>>>> 036c65f0bc910edc6d9dbbf5405c4a4731c3ca44
 	*buff_ind = 0;
 }
 
